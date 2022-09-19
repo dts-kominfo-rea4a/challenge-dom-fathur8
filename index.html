@@ -7,61 +7,65 @@
     <title>Challenge - DOM</title>
   </head>
   <style>
-    #todo-title,#todo-subtitle {
-      text-align: center;
+    body {
+      background-color: aliceblue;
     }
-    .Container1 {
-     background-color: tomato;
-  color: white;
-  border: 2px solid black;
-  margin: 20px;
-  padding: 20px;
-    }
+
     .container {
-     background-color: gray;
-  color: white;
-  border: 2px solid black;
-  margin: 20px;
-  padding: 20px;
-  width:200px;
-  height:300px;
-  align-content: center;
-  border-radius:25px
- 
+      position: relative;
+      z-index: 1;
+      top: 50px;
+      background: #008080;
+      max-width: 360px;
+      margin: 0 auto 100px;
+      padding: 15px;
+      text-align: left;
+      border-radius: 25px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     }
-    .button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  font-size: 10px;
-}
+
+    #todo-title {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    }
+
+    #todo-subtitle {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    }
+
+    .content {
+      text-align: center;
+      background: #008080;
+    }
   </style>
+
   <body>
+    <!-- TODO: Buatlah sebuah header dengan id todo-title -->
+    <!-- TODO: Buatlah sebuah subtitle dengan id todo-subtitle -->
+
+    <!-- Section: input -->
+    <!-- TODO: Buatlah sebuah input bertipe text dengan id todo-input -->
+    <!-- TODO: Buatlah sebuah button dengan id todo-submit -->
+
+    <!-- Section output -->
+    <!-- TODO: Buatlah sebuah <ul> dengan id todo-output -->
     <div id="app">
-      <!-- TODO: Buatlah sebuah header dengan id todo-title -->
-      <h1 id="todo-title">To-Do List</h1>
-      <!-- TODO: Buatlah sebuah subtitle dengan id todo-subtitle -->
-      <h2 id="todo-subtitle">~Today I need To~</h2>
-      <div class="Container1">
       <div class="container">
-    
-    
-      <!-- Section: input -->
-      <!-- TODO: Buatlah sebuah input bertipe text dengan id todo-input -->
-      <input style="width: 100px;" id="todo-input"></input>
-   
-      <!-- TODO: Buatlah sebuah button dengan id todo-submit -->
-      <button class="button" id="todo-submit" > Submit</button>
-      <ul id="todo-output">
-      </ul>
-    </div>
-      <!-- Section output -->
-      <!-- TODO: Buatlah sebuah <ul> dengan id todo-output -->
-  
-    
-    </div>
+        <header>
+          <h3 id="todo-title">To-Do List</h3>
+          <h4 id="todo-subtitle">-- Today i need to--</h4>
+          <hr />
+        </header>
+        <div class="content">
+          <input type="text" name="" id="todo-input" />
+          <button id="todo-submit">Submit</button>
+        </div>
+        <ul id="todo-output"></ul>
+      </div>
     </div>
 
     <!-- ! Untuk tantangan ini, script jangan diubah ke external js yah ! -->
