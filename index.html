@@ -68,26 +68,31 @@
     <script>
       // TODO: Deklarasi variable sesuai dengan kebutuhan di sini
       let button=document.getElementById("todo-submit").value; 
-      let input;
+      let input=document.getElementById("todo-input").value; 
+      // let output=document.getElementById("todo-output").value; 
       let output = document.querySelectorAll("#todo-output li");
-
+     
       // TODO: Buatlah sebuah fungsi dengan nama fnClickHandler
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
-
-      let input=document.getElementById("todo-input").value; 
-      console.log(input);
-      const node = document.createElement("li");
-
-      const textnode = document.createTextNode(input);
-      node.appendChild(textnode);
-
-      document.getElementById("todo-output").appendChild(node);
-      }
+      let val = input.value;
+      let li = document.createElement('li');
+      li.innerHTML = val;
+      output.append(li);
+      input.value = '';
+      //alert(val);
+       }
+      
 
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
+      button.addEventListener('click', fnClickHandler);
+      input.addEventListener('keypress', (event) =>{
+      if(event.key == 'Enter'){
+        fnClickHandler(event);
+      }
+      })
 
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
